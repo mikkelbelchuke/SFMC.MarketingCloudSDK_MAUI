@@ -90,16 +90,16 @@ Add **Salesforce Marketing Cloud credentials** inside **`Resources/Raw/appsettin
 {
   "MarketingCloudConfig": {
     "Debug": {
-      "AppId": "7827e05b-315f-4b7a-abdf-d64ed934d36f",
-      "AccessToken": "f19wBCRFvlM2V7FTaIKBH1qp",
-      "AppEndpointURL": "https://mc8j2ghzb85r2zywfzdynn1hhjc8.device.marketingcloudapis.com/",
-      "Mid": "536004638"
+      "AppId": "",
+      "AccessToken": "",
+      "AppEndpointURL": "",
+      "Mid": ""
     },
     "Production": {
-      "AppId": "7827e05b-315f-4b7a-abdf-d64ed934d36f",
-      "AccessToken": "f19wBCRFvlM2V7FTaIKBH1qp",
-      "AppEndpointURL": "https://mc8j2ghzb85r2zywfzdynn1hhjc8.device.marketingcloudapis.com/",
-      "Mid": "536004638"
+      "AppId": "",
+      "AccessToken": "",
+      "AppEndpointURL": "h",
+      "Mid": ""
     }
   }
 }
