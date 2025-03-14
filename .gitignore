@@ -1,0 +1,55 @@
+# Ignore build outputs
+bin/
+obj/
+*.nuspec
+
+# Ignore macOS system files
+.DS_Store
+
+# Ignore Visual Studio & JetBrains Rider
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.vs/
+
+# Ignore logs
+*.log
+logs/
+logs/**
+
+# Ignore generated package files
+*.nupkg
+*.snupkg
+
+# Ignore user-specific config
+*.userprefs
+*.localhistory
+
+# Ignore temporary files
+*.bak
+*.swp
+*.swo
+*.tmp
+Thumbs.db
+
+# Ignore Rider & VS Code workspace settings
+.idea/
+.vscode/
+*.code-workspace
+
+# Ignore Native Binding Output (Xcode & Android)
+ios/native/DerivedData/
+ios/native/*.xcworkspace/
+ios/native/*.xcuserstate
+ios/native/*.xcuserdatad
+ios/native/*.xcuserstate
+android/native/.gradle/
+android/native/.idea/
+
+# Ignore NuGet-related files
+.nuget/
+*.nupkg
+project.lock.json

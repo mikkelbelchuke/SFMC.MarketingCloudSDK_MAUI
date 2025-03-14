@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0-ios;net8.0-android</TargetFrameworks>
+    <OutputPath>bin\$(Configuration)\$(TargetFramework)</OutputPath>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <!-- Include iOS Binding Project -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-ios'">
+    <ProjectReference Include="..\iOS\MarketingCloud.MaciOS.Binding\MarketingCloud.MaciOS.Binding.csproj" />
+    <None Include="..\iOS\native\libMarketingCloudSDK.a" Pack="true" PackagePath="runtimes/ios/native" />
+  </ItemGroup>
+
+  <!-- Include Android Binding Project -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+    <ProjectReference Include="..\Android\MarketingCloud.Android.Binding\MarketingCloud.Android.Binding.csproj" />
+    <None Include="..\Android\native\libMarketingCloudSDK.so" Pack="true" PackagePath="runtimes/android/native" />
+  </ItemGroup>
+
+</Project>

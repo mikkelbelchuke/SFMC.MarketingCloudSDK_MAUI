@@ -1,0 +1,4 @@
+namespace MarketingCloud.MaciOS.Binding
+{
+
+}
