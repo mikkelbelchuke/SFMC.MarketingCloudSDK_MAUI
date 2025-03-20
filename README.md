@@ -229,6 +229,17 @@ public void DidReceiveRemoteNotification(UIApplication application, NSDictionary
 
 ✅ **This ensures that iOS handles push notifications correctly and registers the device with SFMC.**
 
+
+### 🔹 **Step 2: Add this where you will ask for push permissions**
+
+```csharp
+#if IOS
+					MarketingCloudiOS.DotnetMarketingCloud.SetupMobilePush();
+#endif
+```
+
+✅ **This ensures that iOS prompt for permissions.**
+
 ---
 
 ## 🤖 **Android Implementation**

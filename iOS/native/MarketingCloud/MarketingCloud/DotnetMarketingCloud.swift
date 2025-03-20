@@ -69,6 +69,7 @@ public class DotnetMarketingCloud : NSObject
             .setInboxEnabled(inbox)
             .setLocationEnabled(location)
             .setAnalyticsEnabled(analytics)
+            .setDelayRegistrationUntilContactKeyIsSet(true)
             .build()
 
         // Set the completion handler to take action when module initialization is completed. The result indicates if initialization was sucesfull or not.
@@ -76,7 +77,7 @@ public class DotnetMarketingCloud : NSObject
         let completionHandler: (OperationResult) -> () = { result in
             if result == .success {
                 // module is fully configured and ready for use
-                self.setupMobilePush()
+                //self.setupMobilePush()
             } else if result == .error {
                 // module failed to initialize, check logs for more details
             } else if result == .cancelled {

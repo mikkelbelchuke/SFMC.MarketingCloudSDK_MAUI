@@ -156,14 +156,6 @@ class DotnetMarketingCloud {
             }
         }
 
-        @JvmStatic
-        private fun getMessages(result: Result) {
-            handlePushAction {
-                val inboxMessages: List<InboxMessage> = it.inboxMessageManager.getMessages()
-                val str: List<String> = InboxUtils.inboxMessagesToString(inboxMessages)
-                result.success(str)
-            }
-        }
 
         @JvmStatic
         fun getUnreadMessageCount(): Int {
