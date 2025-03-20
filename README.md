@@ -16,7 +16,7 @@ The following API endpoints are implemented and ready for use in this version:
 
 | Endpoint          | Description |
 | -------------     | ------------ |
-| ```InitializeSDK(activity,notificationDrawable,mcApplicationId,mcAccessToken,fcmSenderId,marketingCloudUrl,inboxEnabled,analyticsEnabled,isDebug)```   | Initializes the Salesforce Marketing Cloud SDK.|
+| ```InitializeSDK(activity, notificationDrawable, mcApplicationId, mcAccessToken, fcmSenderId, marketingCloudUrl, inboxEnabled, analyticsEnabled, isDebug)```   | Initializes the Salesforce Marketing Cloud SDK.|
 | ```TogglePushPermission(granted)```  | Enables or disables push notifications based on user permission.|
 | ```SetContactKey(contactKey)``` | Sets the contact key for the current user.|
 | ```setProfileAttribute(key,value)``` | Sets a custom profile attribute for the user.|
