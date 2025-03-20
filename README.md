@@ -12,24 +12,25 @@ This section outlines the currently available API endpoints in this version of t
 
 The following API endpoints are implemented and ready for use in this version:
 
-#### 🔹 SDK Initialization & Configuration
+#### 🔹 ANDROID
 
 | Endpoint          | Description |
 | -------------     | ------------ |
-| initializeSDK()   | Initializes the Salesforce Marketing Cloud SDK.|
+| ```InitializeSDK(activity,notificationDrawable,mcApplicationId,mcAccessToken,fcmSenderId,marketingCloudUrl,inboxEnabled,analyticsEnabled,isDebug)```   | Initializes the Salesforce Marketing Cloud SDK.|
+| ```TogglePushPermission(granted)```  | Enables or disables push notifications based on user permission.|
+| ```SetContactKey(contactKey)``` | Sets the contact key for the current user.|
+| ```setProfileAttribute(key,value)``` | Sets a custom profile attribute for the user.|
 
-#### 🔹 Push Notification Management
-
-| Endpoint          | Description |
-| -------------     | ------------ |
-| togglePushPermission(granted)  | Enables or disables push notifications based on user permission.|
-
-#### 🔹 User & Profile Management
+#### 🔹 iOS
 
 | Endpoint          | Description |
 | -------------     | ------------ |
-| setContactKey(contactKey) | Sets the contact key for the current user.|
-| setProfileAttribute(key, value) | Sets a custom profile attribute for the user.|
+| ```InitializeSDKWithAppId(appId, accessToken, appEndpointURL, mid)```   | Initializes the Salesforce Marketing Cloud SDK.|
+| ```SetupMobilePush()```  | Enables or disables push notifications based on user permission.|
+| ```SetContactKeyWithContactKey(contactKey)``` | Sets the contact key for the current user.|
+| ```SetProfileAttribute(key,value)``` | Sets a custom profile attribute for the user.|
+| ```RegisterDeviceToken(token)``` | Sets a custom profile attribute for the user.|
+
 
 ---
 
@@ -149,7 +150,7 @@ private static MauiAppBuilder RegisterMarketingCloudSDK(this MauiAppBuilder maui
 #if IOS
 			events.AddiOS(iOS => iOS.WillFinishLaunching((_, __) =>
 		    {
-			    MarketingCloudiOS.DotnetMarketingCloud.ConfigureSDKWithAppId(
+			    MarketingCloudiOS.DotnetMarketingCloud.InitializeSDKWithAppId(
 				    config.AppId,
 				    config.AccessToken,
 				    config.AppEndpointURL,
@@ -297,3 +298,13 @@ public class MainActivity : MauiAppCompatActivity
 		}
 	}
 ````
+
+### 🔹 **Step 2: Add this where you will ask for push permissions**
+
+```csharp
+#if ANDROID
+				MarketingCloudAndroid.DotnetMarketingCloud.TogglePushPermission(true/false);
+#endif
+```
+
+✅ **This ensures that Android prompt for permissions.**

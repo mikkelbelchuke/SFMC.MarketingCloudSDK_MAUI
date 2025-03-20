@@ -11,20 +11,20 @@ namespace MarketingCloudiOS
 		[Export("getStringWithMyString:")]
 		string GetString(string myString);
 
-		// +(void)configureSDKWithAppId:(NSString * _Nonnull)appId accessToken:(NSString * _Nonnull)accessToken appEndpointURL:(NSString * _Nonnull)appEndpointURL mid:(NSString * _Nonnull)mid;
+		// +(void)initializeSDKWithAppId:(NSString * _Nonnull)appId accessToken:(NSString * _Nonnull)accessToken appEndpointURL:(NSString * _Nonnull)appEndpointURL mid:(NSString * _Nonnull)mid;
 		[Static]
-		[Export("configureSDKWithAppId:accessToken:appEndpointURL:mid:")]
-		void ConfigureSDKWithAppId(string appId, string accessToken, string appEndpointURL, string mid);
+		[Export("initializeSDKWithAppId:accessToken:appEndpointURL:mid:")]
+		void InitializeSDKWithAppId(string appId, string accessToken, string appEndpointURL, string mid);
 
 		// +(BOOL)application:(UIApplication * _Nonnull)application didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey,id> * _Nullable)launchOptions __attribute__((warn_unused_result("")));
 		[Static]
 		[Export("application:didFinishLaunchingWithOptions:")]
 		bool Application(UIApplication application, [NullAllowed] NSDictionary<NSString, NSObject> launchOptions);
 
-		// +(void)registerUserWithContactKey:(NSString * _Nonnull)contactKey;
+		// +(void)setContactKeyWithContactKey:(NSString * _Nonnull)contactKey;
 		[Static]
-		[Export("registerUserWithContactKey:")]
-		void RegisterUserWithContactKey(string contactKey);
+		[Export("setContactKeyWithContactKey:")]
+		void SetContactKeyWithContactKey(string contactKey);
 
 		// +(void)setProfileAttributeWithKey:(NSString * _Nonnull)key value:(NSString * _Nonnull)value;
 		[Static]
@@ -40,5 +40,6 @@ namespace MarketingCloudiOS
 		[Static]
 		[Export("registerDeviceToken:")]
 		void RegisterDeviceToken(NSData deviceToken);
+
 	}
 }

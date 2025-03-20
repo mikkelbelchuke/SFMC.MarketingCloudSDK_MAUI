@@ -47,7 +47,7 @@ public class DotnetMarketingCloud : NSObject
         }
         
     @objc
-    public static func configureSDK(
+    public static func initializeSDK(
         appId: String,
         accessToken: String,
         appEndpointURL: String,
@@ -95,7 +95,7 @@ public class DotnetMarketingCloud : NSObject
     }
 
     @objc
-    public static func registerUser(contactKey: String)  {
+    public static func setContactKey(contactKey: String)  {
         SFMCSdk.requestPushSdk { mp in
             SFMCSdk.identity.setProfileId(contactKey)
         }
