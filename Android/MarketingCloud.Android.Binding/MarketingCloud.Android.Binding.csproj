@@ -17,13 +17,27 @@
   
   <!-- Reference to Android Gradle project -->
   <ItemGroup>
-    <AndroidGradleProject Include="../native/build.gradle.kts" >
+    <NLIGradleProjectReference Include="../native/">
       <ModuleName>marketingcloud</ModuleName>
       <!-- Metadata applicable to @(AndroidLibrary) will be used if set, otherwise the following defaults will be used:
       <Bind>true</Bind>
       <Pack>true</Pack>
       -->
-    </AndroidGradleProject>
+    </NLIGradleProjectReference>
+
+    <AndroidLibrary Include="../native/marketingcloud/build/outputs/deps/marketingcloudsdk-9.0.0.aar">
+      <Bind>false</Bind>
+      <Visible>false</Visible>
+      </AndroidLibrary>
+		<AndroidLibrary Include="../native/marketingcloud/build/outputs/deps/sfmcsdk-1.0.5.aar">
+      <Bind>false</Bind>
+      <Visible>false</Visible>
+    </AndroidLibrary>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Maui.NativeLibraryInterop.BuildTasks" Version="0.0.1-pre1" PrivateAssets="all" />
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.2.1" />
   </ItemGroup>
 
 </Project>

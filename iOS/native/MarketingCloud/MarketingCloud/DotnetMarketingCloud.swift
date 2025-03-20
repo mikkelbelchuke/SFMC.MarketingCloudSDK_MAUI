@@ -106,7 +106,17 @@ public class DotnetMarketingCloud : NSObject
             SFMCSdk.identity.setProfileAttributes([key: value])
         }
     }
-        
+
+    @objc
+    public static func getInboxMessages(): List<InboxMessage> {
+        SFMCSdk.requestPushSdk { mp in
+            mp.getInboxMessages { messages in
+                for message in messages {
+                    print("Message: \(message)")
+                }
+            }
+        }
+    }   
 
     @objc
     public static func setupMobilePush() {
@@ -149,7 +159,7 @@ public class DotnetMarketingCloud : NSObject
     
     @objc
     public static func registerDeviceToken(_ deviceToken: NSData) {
-        logger.debug("📡 Registering device token with SFMC...")
+        logger.debug("Registering device token with SFMC...")
 
         SFMCSdk.requestPushSdk { pushInstance in
             pushInstance.setDeviceToken(deviceToken as Data)
@@ -158,7 +168,7 @@ public class DotnetMarketingCloud : NSObject
     
     @objc
     public static func failedToRegisterForRemoteNotificationsWithError(_ error: Error) {
-        logger.error("📡 Failed to register for remote notifications: \(error.localizedDescription)")
+        logger.error("Failed to register for remote notifications: \(error.localizedDescription)")
     }
 
     // MobilePush SDK: REQUIRED IMPLEMENTATION

@@ -1,4 +1,4 @@
 ﻿<metadata>
     <!-- Make sure the package id and name reflects the new binding name -->
-    <attr path="/api/package[@name='com.twoday.marketingcloud']" name="managedName">MarketingCloudAndroid</attr>
+    <attr path="/api/package[@name='com.mbelchuke.marketingcloud']" name="managedName">MarketingCloudAndroid</attr>
 </metadata>
