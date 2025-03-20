@@ -108,17 +108,6 @@ public class DotnetMarketingCloud : NSObject
     }
 
     @objc
-    public static func getInboxMessages(): List<InboxMessage> {
-        SFMCSdk.requestPushSdk { mp in
-            mp.getInboxMessages { messages in
-                for message in messages {
-                    print("Message: \(message)")
-                }
-            }
-        }
-    }   
-
-    @objc
     public static func setupMobilePush() {
 
         // Set the MarketingCloudSDKURLHandlingDelegate to a class adhering to the protocol.
