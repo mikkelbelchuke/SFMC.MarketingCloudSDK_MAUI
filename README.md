@@ -2,6 +2,53 @@
 
 This repository provides a **.NET MAUI binding** for integrating the **Salesforce Marketing Cloud (SFMC) SDK** into iOS and Android applications.  
 
+### 📌 Available API Endpoints & Roadmap
+
+This section outlines the currently available API endpoints in this version of the SFMC.MarketingCloudSDK.MAUI package and provides insight into the upcoming features planned for future releases.
+
+⸻
+
+✅ Available API Endpoints (Current Version)
+
+The following API endpoints are implemented and ready for use in this version:
+
+#### 🔹 SDK Initialization & Configuration
+
+| Endpoint          | Description |
+| -------------     | ------------ |
+| initializeSDK()   | Initializes the Salesforce Marketing Cloud SDK.|
+
+#### 🔹 Push Notification Management
+
+| Endpoint          | Description |
+| -------------     | ------------ |
+| togglePushPermission(granted)  | Enables or disables push notifications based on user permission.|
+
+#### 🔹 User & Profile Management
+
+| Endpoint          | Description |
+| -------------     | ------------ |
+| setContactKey(contactKey) | Sets the contact key for the current user.|
+| setProfileAttribute(key, value) | Sets a custom profile attribute for the user.|
+
+---
+
+### 🔜 Upcoming Features (Next Versions)
+
+In the next releases, we plan to expand the API capabilities with the following features:
+
+🚀 Planned Enhancements
+
+| Feature Group          | Expected Version | Status |
+| -------------     | ------------ | ------------ |
+| Inbox Message Management | v1.1.0 | 🔄 In Progress|
+| General SDK Information | v1.1.1 | 🆕 Planned|
+| User & Device Management | v1.1.2 | 🆕 Planned|
+| Attribute Management | v1.1.3 | 🆕 Planned|
+| Push Notification Management | v1.1.4 | 🆕 Planned|
+
+
+
 ## 📌 Prerequisites
 
 ### 1️⃣ **Generate an Authentication Certificate**
